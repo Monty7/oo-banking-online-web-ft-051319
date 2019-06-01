@@ -26,6 +26,7 @@ class Transfer
   end
   
   def reverse_transfer
+    execute_transaction
     if execute_transaction == "complete"
     #binding.pry
       @sender.balance += @amount
